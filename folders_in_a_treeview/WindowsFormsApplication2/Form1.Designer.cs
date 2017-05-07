@@ -1,4 +1,4 @@
-﻿namespace tstforms
+﻿namespace WindowsFormsApplication2
 {
     partial class Form1
     {
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Hello = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // Hello
+            // treeView1
             // 
-            this.Hello.Location = new System.Drawing.Point(101, 116);
-            this.Hello.Name = "Hello";
-            this.Hello.Size = new System.Drawing.Size(75, 23);
-            this.Hello.TabIndex = 0;
-            this.Hello.Text = "Hello";
-            this.Hello.UseVisualStyleBackColor = true;
-            this.Hello.Click += new System.EventHandler(this.Hello_Click);
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(554, 540);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeExpand);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.Hello);
+            this.ClientSize = new System.Drawing.Size(554, 540);
+            this.Controls.Add(this.treeView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Hello;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 
